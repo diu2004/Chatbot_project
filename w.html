@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Navigator</title>
+    <link rel="stylesheet" href="C.css">
+</head>
+<body>
+    <!-- Signup and Login Page -->
+    <div class="container" id="auth-container">
+        <h2>Welcome to Wellness Navigator</h2>
+        <input type="text" id="username" placeholder="Enter your name">
+        <input type="password" id="password" placeholder="Enter your password">
+        <button onclick="signup()">Sign Up</button>
+        <button onclick="login()">Login</button>
+    </div>
+    
+    <!-- Home Page with More Information -->
+    <div class="container hidden" id="home-container">
+        <img src="insurance banner.jpeg" alt="Health Insurance Banner">
+        
+
+        <h2>Wellness Navigator - Your Insurance Guide</h2>
+        <div class="info-box">
+            <p>We help you understand and navigate medical insurance with ease. Get information on policies, claims, coverage, and more.</p>
+            <p>Click below to interact with our chatbot for quick answers to common medical insurance questions.</p>
+        </div>
+         
+         
+        
+        <h3>Top Health Insurance Policies:</h3>
+        <div class="policy"><b>Basic Health Plan:</b> Covers general medical expenses with affordable premiums.</div>
+        <div class="policy"><b>Comprehensive Plan:</b> Includes hospitalization, medicines, and specialist visits.</div>
+        <div class="policy"><b>Family Health Insurance:</b> Covers all family members under a single plan.</div>
+        <div class="policy"><b>Senior Citizen Plan:</b> Special coverage for elderly individuals with added benefits.</div>
+        
+        <style>
+            .policy {
+                padding: 10px; /* Adds equal space between lines */
+                border-bottom: 1px solid #ddd; /* Adds a light separator */
+            }
+        </style>
+        
+        
+        
+        
+        <button onclick="openChatbot()">Open Chatbot</button>
+        <button onclick="logout()">Logout</button>
+    </div>
+    
+    <!-- Chatbot Page with Styled Buttons -->
+    <div class="container hidden" id="chat-container">
+        <h2>Insurance Chatbot</h2>
+        <p>Select a question to get an answer:</p>
+        <button onclick="showAnswer('coverage')">What does health insurance cover?</button>
+        <button onclick="showAnswer('apply')">How can I apply for insurance?</button>
+        <button onclick="showAnswer('claim')">What is the claim process?</button>
+        <button onclick="showAnswer('premium')">What are the premium costs?</button>
+        <button onclick="showAnswer('change')">Can I change my plan?</button>
+        <button onclick="showAnswer('hmo_vs_ppo')">What is the difference between HMO, PPO, and EPO plans?</button>
+        <button onclick="showAnswer('deductible')">How does a deductible impact my costs?</button>
+        <button onclick="showAnswer('missed_payment')">What happens if I miss a premium payment?</button>
+        <button onclick="showAnswer('pre_existing')">How do pre-existing conditions affect coverage?</button>
+        <button onclick="showAnswer('denied_claim')">What is the process for appealing a denied claim?</button>
+        <button onclick="showAnswer('tax_benefits')">Are there tax benefits for purchasing health insurance?</button>
+        <button onclick="showAnswer('international')">Can I use health insurance for international expenses?</button>
+        <button onclick="showAnswer('copay')">What is a co-pay and how does it work?</button>
+        <button onclick="showAnswer('network_coverage')">What is the difference between in-network and out-of-network coverage?</button>
+        <div class="info-box" id="chat-box"></div>
+        <button onclick="closeChatbot()">Back to Home</button>
+    </div>
+    
+    <script src="B.js"></script>
+</body>
+</html>
